@@ -74,20 +74,20 @@ namespace LeeSinBuddy
         {
             if (Player.Instance.Hero != Champion.LeeSin) return;
 
-            menu = MainMenu.AddMenu("Fluxy's LeeSinBuddy", "LeeSinBuddyMenu");
-            menu.AddGroupLabel("Fluxy's LeeSinBuddy");
+            menu = MainMenu.AddMenu("LeeSin - Lolscripts.net", "LeeSin - Lolscripts.net");
+            menu.AddGroupLabel("LeeSin - Lolscripts.net");
             menu.AddSeparator();
-            menu.AddLabel("Made By Fluxy");
-            menu.AddLabel("fleshlit by finn");
-            menu.AddLabel("no jquery here :P");
+            menu.AddLabel("Lolscripts.net");
+            menu.AddLabel("Lolscripts.net");
+            menu.AddLabel("Lolscripts.net");
 
-            DrawingMenu = menu.AddSubMenu("Drawing Settings", "menuleesin");
-            DrawingMenu.Add("drawQ1", new CheckBox("Draw Q1", false));
-            DrawingMenu.Add("drawQ2", new CheckBox("Draw Q2", false));
-            DrawingMenu.Add("drawW1", new CheckBox("Draw W1", false));
-            DrawingMenu.Add("drawE1", new CheckBox("Draw E1", false));
-            DrawingMenu.Add("drawE2", new CheckBox("Draw E2", false));
-            DrawingMenu.Add("drawR", new CheckBox("Draw R", false));
+            DrawingMenu = menu.AddSubMenu("Circulos Config", "Menu");
+            DrawingMenu.Add("drawQ1", new CheckBox("Circulo Q1", false));
+            DrawingMenu.Add("drawQ2", new CheckBox("Circulo Q2", false));
+            DrawingMenu.Add("drawW1", new CheckBox("Circulo W1", false));
+            DrawingMenu.Add("drawE1", new CheckBox("Circulo E1", false));
+            DrawingMenu.Add("drawE2", new CheckBox("Circulo E2", false));
+            DrawingMenu.Add("drawR", new CheckBox("Circulo R", false));
 
             Q = new Spell.Skillshot(SpellSlot.Q, 1100, SkillShotType.Linear, 250, 1800, 70);
             Q2 = new Spell.Active(SpellSlot.Q, 1400); // 1400
@@ -106,7 +106,7 @@ namespace LeeSinBuddy
             Smiter.Init();
             Game.OnTick += Game_OnTick;
 
-            Chat.Print("Fluxy's Lee Sin Buddy Loaded.", System.Drawing.Color.BlueViolet);
+            Chat.Print("Lee Sin - Lolscripts.net cargado.", System.Drawing.Color.BlueViolet);
         }
 
         private static void Drawing_OnDraw(EventArgs args)
